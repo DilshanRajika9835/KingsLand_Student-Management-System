@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="637.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.kingsland.pos.controller.RegFormController">
+   <children>
+      <Label layoutX="402.0" layoutY="139.0" text="Reg No">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="38.0" prefHeight="22.0" prefWidth="124.0" text="Student ID">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="934.0" layoutY="140.0" prefHeight="22.0" prefWidth="145.0" text="Register Date">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="139.0" prefHeight="22.0" prefWidth="145.0" text="Course Code">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="195.0" prefHeight="22.0" prefWidth="91.0" text="Reg Free">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtid" layoutX="162.0" layoutY="37.0" onAction="#txtSearchIDOnAction" prefHeight="25.0" prefWidth="212.0" promptText="Search Student ID" />
+      <DatePicker fx:id="txtregdate" layoutX="1088.0" layoutY="139.0" prefHeight="25.0" prefWidth="212.0" promptText="Select Registor Date" />
+      <TextField fx:id="lblRegNo" layoutX="574.0" layoutY="139.0" prefHeight="25.0" prefWidth="239.0" promptText="Registor Number" />
+      <ComboBox fx:id="cmbRegFree" layoutX="161.0" layoutY="195.0" prefHeight="25.0" prefWidth="212.0" promptText="Select Reg Free" />
+      <ComboBox fx:id="cmbcoursecode" layoutX="164.0" layoutY="138.0" onAction="#cmbSelectCourseCodeOnAction" prefHeight="25.0" prefWidth="212.0" promptText="Select Course Code" />
+      <Label layoutX="27.0" layoutY="86.0" prefHeight="22.0" prefWidth="113.0" text=" Birth Day">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="571.0" layoutY="34.0" prefHeight="22.0" prefWidth="131.0" text="Student Name">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="399.0" layoutY="88.0" prefHeight="22.0" prefWidth="131.0" text="Student Gender">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="934.0" layoutY="31.0" prefHeight="22.0" prefWidth="131.0" text="Student Address">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbStudentID" layoutX="398.0" layoutY="33.0" onAction="#cmbSelectIDOnAction" prefHeight="25.0" prefWidth="145.0" promptText="Select Student ID" />
+      <Label fx:id="lblName" layoutX="716.0" layoutY="33.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblAddress" layoutX="1088.0" layoutY="30.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-color: white;" />
+      <Label fx:id="lblBirthDay" layoutX="164.0" layoutY="84.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-color: white;" />
+      <Separator layoutY="253.0" prefWidth="1366.0" />
+      <Button layoutX="1209.0" layoutY="201.0" mnemonicParsing="false" onAction="#btnregistorOnAction" prefHeight="34.0" prefWidth="113.0" text="Registor">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblregistorStudent" layoutX="23.0" layoutY="279.0" prefHeight="266.0" prefWidth="1311.0">
+        <columns>
+            <TableColumn fx:id="colregno" prefWidth="143.00003051757812" text="Registor Number" />
+          <TableColumn fx:id="colid" prefWidth="272.9999694824219" text="Student ID" />
+            <TableColumn fx:id="colcoursecode" prefWidth="347.0" text="Course Code" />
+            <TableColumn fx:id="coldate" prefWidth="286.0" text="Registor Date" />
+            <TableColumn fx:id="colregFree" prefWidth="260.0" text="Registor Free" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblGender" layoutX="572.0" layoutY="83.0" prefHeight="25.0" prefWidth="239.0" style="-fx-background-color: white;" />
+      <Button layoutX="1221.0" layoutY="559.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="34.0" prefWidth="113.0" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Separator layoutX="10.0" layoutY="608.0" prefWidth="1366.0" />
+      <Label layoutX="928.0" layoutY="85.0" prefHeight="22.0" prefWidth="145.0" text=" ContactNumber">
+         <font>
+            <Font name="Bell MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblcontactnumber" layoutX="1088.0" layoutY="84.0" prefHeight="25.0" prefWidth="212.0" style="-fx-background-color: white;" />
+      <Button layoutX="1082.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="34.0" prefWidth="113.0" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="960.0" layoutY="203.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="34.0" prefWidth="113.0" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

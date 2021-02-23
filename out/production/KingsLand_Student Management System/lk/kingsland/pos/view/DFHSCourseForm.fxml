@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.kingsland.pos.controller.DFHSCourseFormController">
+   <children>
+      <Label alignment="CENTER" layoutY="14.0" opacity="0.38" prefHeight="67.0" prefWidth="1366.0" text="DFHS Course Student Registration List">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblDFHSCourse" layoutX="31.0" layoutY="99.0" prefHeight="467.0" prefWidth="1303.0">
+        <columns>
+          <TableColumn fx:id="colregNumber" prefWidth="230.0" text="Registor No" />
+            <TableColumn fx:id="colid" prefWidth="286.0" text="Student ID" />
+            <TableColumn fx:id="colcontact" prefWidth="286.0" text="Contact Number" />
+            <TableColumn fx:id="colcoursecode" prefWidth="258.0" text="Course Code" />
+            <TableColumn fx:id="colregfree" prefWidth="242.0" text="Reg Free" />
+        </columns>
+      </TableView>
+      <Separator layoutX="2.0" layoutY="586.0" prefWidth="1366.0" />
+   </children>
+</AnchorPane>

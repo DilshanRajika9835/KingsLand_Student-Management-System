@@ -1,0 +1,62 @@
+DROP DATABASE IF EXISTS Kingsland;
+CREATE DATABASE Kingsland;
+USE  Kingsland;
+
+CREATE TABLE  Student(
+StudentID VARCHAR(100)not null,
+StudentName VARCHAR(45)not null,
+Address VARCHAR(45)not null,
+Contact VARCHAR(45)not null,
+Dob VARCHAR(30)not null,
+Gender VARCHAR(10)not null,
+CONSTRAINT PRIMARY KEY(StudentID)
+
+
+);
+CREATE TABLE  Course(
+CourseCode VARCHAR(20)not null,
+CourseName  VARCHAR(40)not null,
+CourseType VARCHAR(45)not null,
+Deuration VARCHAR(20)not null,
+RegFree DECIMAL(10,2)not null,
+CONSTRAINT PRIMARY KEY(CourseCode)
+);
+CREATE TABLE  Registration(
+RegNO VARCHAR(100)not null,
+RegDate VARCHAR(20)not null,
+StudentID VARCHAR(100)not null,
+CourseCode VARCHAR(20)not null,
+RegFree DECIMAL(10,2)not null,
+CONSTRAINT Unique KEY(CourseCode,StudentID),
+CONSTRAINT PRIMARY KEY(regNO,CourseCode,StudentID),
+CONSTRAINT FOREIGN KEY(CourseCode)REFERENCES Course(CourseCode)ON DELETE CASCADE ON UPDATE CASCADE,
+CONSTRAINT FOREIGN KEY(StudentID)REFERENCES Student(StudentID)ON DELETE CASCADE ON UPDATE CASCADE
+
+);
+INSERT INTO Course VALUES('C001','ABCD','Fall,Spring','1 Year',5000);
+INSERT INTO Course VALUES('C002','BCSC','Spring,Summer,Fall','3 Year',7000);
+INSERT INTO Course VALUES('C003','DFHS','Spring','3 Year',6000);
+
+
+INSERT INTO Student VALUES('986098756V','Dilshan Rajika','Colombo','0987645332','1998-09-09','Male');
+INSERT INTO Student VALUES('887564536V','Kamal Aththanayaka','Hapugala','0987645332','1988-09-09','Male');
+INSERT INTO Student VALUES('209841254V','Nimal Perera','Galle','0987645332','1920-09-09','Male');
+INSERT INTO Student VALUES('880975546V','Vimal Virawansa','Mathara','0987645332''1988-09-09','Male');
+INSERT INTO Student VALUES('772568584V','Ruwan Hettiarachchi','Madakalapu','0987645332','1977-09-08','Male');
+INSERT INTO Student VALUES('665869742V','Amali Kodithuwakku','Hikkaduwa','0987645332','1966-09-08','Female');
+
+INSERT INTO Registration VALUES('D001','2000-09-09','S003','C001',5000);
+INSERT INTO Registration VALUES('D002','2000-09-29','S004','C001',5000);
+INSERT INTO Registration VALUES('D003','2000-09-19','S005','C003',6000);
+INSERT INTO Registration VALUES('D004','2000-02-02','S003','C002',7000);
+INSERT INTO Registration VALUES('D005','2000-09-04','S005','C003',6000);
+INSERT INTO Registration VALUES('D006','2000-09-09','S004','C001',5000);
+
+
+
+
+
+
+
+
+

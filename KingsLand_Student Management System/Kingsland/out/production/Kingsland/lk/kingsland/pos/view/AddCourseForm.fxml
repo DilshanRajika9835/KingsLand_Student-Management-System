@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="637.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.kingsland.pos.controller.AddCourseFormController">
+   <children>
+      <Label layoutX="30.0" layoutY="61.0" text="Course Code">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcode" layoutX="168.0" layoutY="62.0" onAction="#txtsearchCodeOnAction" prefHeight="25.0" prefWidth="247.0" promptText="Enter Course Code" />
+      <Label layoutX="439.0" layoutY="61.0" text="Course Name">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtname" layoutX="617.0" layoutY="62.0" prefHeight="25.0" prefWidth="247.0" promptText="Enter Course Name" />
+      <Label layoutX="30.0" layoutY="110.0" text="Deuration">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdeuration" layoutX="168.0" layoutY="111.0" prefHeight="25.0" prefWidth="247.0" promptText="Deuration" />
+      <Label layoutX="447.0" layoutY="110.0" text="Reg Free">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtregfree" layoutX="617.0" layoutY="111.0" prefHeight="25.0" prefWidth="247.0" promptText="Enter Reg Free" />
+      <Label layoutX="883.0" layoutY="61.0" text="Course Type">
+         <font>
+            <Font name="Bell MT Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcoursetype" layoutX="1080.0" layoutY="62.0" prefHeight="25.0" prefWidth="247.0" promptText="Enter Course Type" />
+      <Button layoutX="1070.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="36.0" prefWidth="123.0" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="1204.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="36.0" prefWidth="123.0" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="800.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="36.0" prefWidth="123.0" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="935.0" layoutY="191.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="36.0" prefWidth="123.0" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="432.0" layoutY="6.0" opacity="0.28" text="Add New Course Form">
+         <font>
+            <Font name="Bell MT Bold" size="37.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblcourse" layoutX="43.0" layoutY="252.0" prefHeight="349.0" prefWidth="1277.0">
+        <columns>
+          <TableColumn fx:id="colcoursecode" prefWidth="279.0" text="Course Code" />
+          <TableColumn fx:id="colcoursename" prefWidth="242.0" text="Course Name" />
+            <TableColumn fx:id="colcoursetype" prefWidth="306.0" text="Course Type" />
+            <TableColumn fx:id="coldeuration" prefWidth="221.0" text="Deuration " />
+            <TableColumn fx:id="colregfree" prefWidth="228.0" text="Reg Free" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

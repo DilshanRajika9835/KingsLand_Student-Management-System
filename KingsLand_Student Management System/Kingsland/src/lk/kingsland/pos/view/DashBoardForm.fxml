@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.validation.IntegerValidator?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="692.0" prefWidth="1353.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.kingsland.pos.controller.DashBoardFormController">
+   <children>
+      <AnchorPane prefHeight="63.0" prefWidth="1366.0" style="-fx-background-color: gray;">
+         <children>
+            <Button layoutX="149.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnAddCourseOnAction" prefHeight="32.0" prefWidth="116.0" text="Add Course">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="286.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnABCDCourseOnAction" prefHeight="32.0" prefWidth="116.0" text="ABCD Course">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="419.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnBCSCCourseOnAction" prefHeight="32.0" prefWidth="116.0" text="BCSC Course">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="553.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnDFHSCourseOnAction" prefHeight="32.0" prefWidth="116.0" text="DFHS Course">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnRegCourseOnAction" prefHeight="32.0" prefWidth="116.0" text="Reg Student">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </AnchorPane>
+      <IntegerValidator layoutX="1070.0" layoutY="201.0" />
+      <AnchorPane fx:id="root" layoutY="63.0" prefHeight="637.0" prefWidth="1366.0">
+         <children>
+            <Label layoutX="29.0" layoutY="70.0" prefHeight="32.0" prefWidth="116.0" text="Student ID">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtid" layoutX="192.0" layoutY="66.0" onAction="#txtSIDSearchOnAction" prefHeight="32.0" prefWidth="254.0" promptText="Enter Student ID" />
+            <Label layoutX="17.0" layoutY="121.0" prefHeight="32.0" prefWidth="153.0" text="  Contact Number">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtcontact" layoutX="192.0" layoutY="117.0" prefHeight="32.0" prefWidth="254.0" promptText="Enter  Contact Number" />
+            <Label layoutX="457.0" layoutY="66.0" prefHeight="32.0" prefWidth="116.0" text="Student Name">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtname" layoutX="611.0" layoutY="61.0" prefHeight="32.0" prefWidth="254.0" promptText="Enter Student Name" />
+            <Label layoutX="457.0" layoutY="117.0" prefHeight="32.0" prefWidth="116.0" text="Birth Day">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="903.0" layoutY="66.0" prefHeight="32.0" prefWidth="153.0" text="Student Address">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtaddress" layoutX="1076.0" layoutY="61.0" prefHeight="32.0" prefWidth="254.0" promptText="Enter Student Address" />
+            <Label layoutX="909.0" layoutY="113.0" prefHeight="32.0" prefWidth="116.0" text="Gender">
+               <font>
+                  <Font name="Bodoni MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="txtbirthdate" layoutX="613.0" layoutY="117.0" prefHeight="32.0" prefWidth="254.0" promptText="Enter Student BirthDay" />
+            <ComboBox fx:id="cmbgender" layoutX="1078.0" layoutY="114.0" prefHeight="32.0" prefWidth="254.0" promptText="Select Gender" />
+            <Button layoutX="946.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="39.0" prefWidth="116.0" text="Update">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="1077.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="116.0" text="Clear">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="1205.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="39.0" prefWidth="116.0" text="Save">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="818.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="39.0" prefWidth="116.0" text="Delete">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Separator layoutY="240.0" prefWidth="1366.0" />
+            <TableView fx:id="tblstudent" layoutX="41.0" layoutY="258.0" prefHeight="314.0" prefWidth="1283.0">
+              <columns>
+                <TableColumn fx:id="colid" prefWidth="134.0" text="Student ID" />
+                <TableColumn fx:id="colname" prefWidth="291.0" text="Student Name" />
+                  <TableColumn fx:id="coladdress" prefWidth="291.0" text="Student Address" />
+                  <TableColumn fx:id="colnumber" prefWidth="185.0" text="Contact Number" />
+                  <TableColumn fx:id="colbirthday" prefWidth="192.0" text="Student BirthDay" />
+                  <TableColumn fx:id="colgender" prefWidth="189.0" text="Student Gender" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="1.0" opacity="0.27" prefHeight="57.0" prefWidth="1366.0" text="Student Add Form">
+               <font>
+                  <Font name="Bell MT Bold" size="37.0" />
+               </font>
+            </Label>
+            <Separator layoutX="10.0" layoutY="599.0" prefWidth="1366.0" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
